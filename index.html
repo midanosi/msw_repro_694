@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>PUI</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            body::before {
+                content: attr(data-state);
+                font-size: 2rem;
+                font-family: monospace;
+                position: absolute;
+                padding: 1rem;
+                z-index: 99;
+                right: 0;
+                top: 50%;
+                text-shadow: 0 0 2px white;
+                pointer-events: none;
+
+                /* remove this when using useXstateMachineDebug */
+                display: none;
+            }
+        </style>
+
+        <!-- Place favicon.ico in the root directory -->
+        <!-- <link rel="apple-touch-icon" href="icon.png" /> -->
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/index.jsx"></script>
+    </body>
+</html>
